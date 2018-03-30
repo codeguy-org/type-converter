@@ -15,7 +15,6 @@ public class ConverterFactoryTest extends TestCase {
 		Converter c = cf.getConverter(String.class);
 		
 		assertTrue(c instanceof StringConverter);
-		assertEquals(c.convert(10), "10");
 	}
 	
 }

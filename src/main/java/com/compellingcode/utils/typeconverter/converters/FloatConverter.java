@@ -24,8 +24,6 @@ public class FloatConverter extends Converter {
 		
 		BigDecimal bd = bigDecimalConverter.convert(o, BigDecimal.class);
 		Float f = bd.floatValue();
-		if(bd.compareTo(BigDecimal.valueOf(f)) != 0)
-			throw new ConversionErrorException(String.format("Cannot convert %s to float.", o.toString()));
 		
 		return f;
 	}

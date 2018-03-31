@@ -24,8 +24,6 @@ public class DoubleConverter extends Converter {
 		
 		BigDecimal bd = bigDecimalConverter.convert(o, BigDecimal.class);
 		Double d = bd.doubleValue();
-		if(bd.compareTo(BigDecimal.valueOf(d)) != 0)
-			throw new ConversionErrorException(String.format("Cannot convert %s to double.", o.toString()));
 		
 		return d;
 	}
